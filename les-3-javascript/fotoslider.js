@@ -1,6 +1,5 @@
 let fotonummer, fotobreedte, aantalfotos, fotoslider;
 
-
 document.addEventListener('DOMContentLoaded', setupFotoslider);
 
 function setupFotoslider() {
@@ -15,6 +14,7 @@ function setupFotoslider() {
 
     volgendeKnop.addEventListener("click", volgendeFoto);
     vorigeKnop.addEventListener("click", vorigeFoto);
+
 };
 
 function volgendeFoto() {
@@ -23,9 +23,9 @@ function volgendeFoto() {
     fotonummer += 1;
 
     // Als fotonummer gelijk is aan het aantal foto's willen we weer terug naar de eerste foto
-    if (fotonummer === 5) {
+    if (fotonummer === aantalfotos) {
         fotonummer = 0;
-    };
+    }
 
     // Dit is de berekening die ik hierboven heb uitgelegd
     // Bereken aan de hand van het fotonummer hoe veel de slider naar links moet in de viewport
@@ -36,9 +36,6 @@ function volgendeFoto() {
 
     let slideteller = document.getElementById('slidenr');
     slideteller.innerHTML = fotonummer + 1 + "/5";
-
-    vooruitgegaan = true;
-    teruggegaan = false;
 };
 
 function vorigeFoto() {
@@ -48,7 +45,7 @@ function vorigeFoto() {
 
     // Als fotonummer gelijk is aan het aantal foto's willen we weer terug naar de eerste foto
     if (fotonummer < 1) {
-        fotonummer = 5;
+        fotonummer = aantalfotos;
     }
 
     // Dit is de berekening die ik hierboven heb uitgelegd
