@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function haalElementenOp(){
+            // fotoslider div
+            let fotoslider = document.getElementById("fotoslider");
+            console.log(fotoslider);
+            // 1st class=foto
+            let eersteFotoDiv = document.querySelector('.foto');
+            console.log(eersteFotoDiv);
+            // all class=foto
+            let alleFotoDivs = document.querySelectorAll('.foto');
+            console.log(alleFotoDivs);
+        
+            // for loop to change foto classes
+            for (let i = 0; i < alleFotoDivs.length; i++) {
+                let changeSlide = alleFotoDivs[i];
+            }
+            alleFotoDivs
+            
+        };
+        window.addEventListener('DOMContentLoaded', haalElementenOp);
+    </script>
+</head>
+<body>
+    <div id="fotoslider">
+        <div class="foto"><img src="images/golira.jpg" /></div>
+        <div class="foto"><img src="images/obonke.jpg" /></div>
+        <div class="foto"><img src="images/assaultmonke.jpg" /></div>
+    </div>
+</body>
+</html>
