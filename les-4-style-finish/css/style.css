@@ -1,0 +1,73 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url(../images/bonzibuddy.png);
+    background-color: #4c286e;
+}
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+#viewport {
+    position: relative;
+    height:450px;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+#fotoslider {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    padding: auto;
+    margin: auto;
+    left: 0px;
+    transition-property: left;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+}
+
+.slide {
+    width: 600px;
+    height: 450px;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#controls {
+    border: none;
+    margin: 1vw;
+}
+
+#contents {
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    padding: 15px;
+    color: black;
+    background-color: #d6b6f5;
+    border-width: 3px;
+    border-color: black;
+}
+
+.button:hover {
+    background-color: #4c286e;
+    cursor: pointer;
+}
